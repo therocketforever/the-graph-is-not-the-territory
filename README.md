@@ -1,4 +1,5 @@
 # The-graph-is-not-the-territory
+[![Build Status](https://travis-ci.org/therocketforever/the-graph-is-not-the-territory.svg?branch=master)](https://travis-ci.org/therocketforever/the-graph-is-not-the-territory)
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.

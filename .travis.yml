@@ -1,24 +1,25 @@
----
 language: node_js
 node_js:
-  - "4"
-
+- '4'
 sudo: false
-
 cache:
   directories:
-    - node_modules
-
+  - node_modules
 before_install:
-  - npm config set spin false
-  - npm install -g bower
-  - bower --version
-  - npm install phantomjs-prebuilt
-  - node_modules/phantomjs-prebuilt/bin/phantomjs --version
-
+- npm config set spin false
+- npm install -g bower
+- bower --version
+- npm install phantomjs-prebuilt
+- node_modules/phantomjs-prebuilt/bin/phantomjs --version
 install:
-  - npm install
-  - bower install
-
+- npm install
+- bower install
 script:
-  - npm test
+- npm test
+deploy:
+  provider: heroku
+  api_key:
+    secure: c756acQvlJDiJaFON4VaenmIot1b5MveOw/sMEpGmKh5a6jLxxe3NzRKRA6nHCU9VKnzfUm6yY8w3y3QO994lzD7xpCdBrdxh+efYuVYe/J4be64IxMiuRMdu1NjhyokVewsSvzE2fFNqng3LvgZZX2H2cG3HDPwu9iOOZSCVQZszaWjBRyZ0RVGf+6XTInN1VyqwaHThP1+lGpYyAtRYC8RF1teJQkJUr0VoXDMVIaSuOVKyB1vFyQU9OeslQfKJNU9tNNrXysC+bG8poegOuK6/Y9b6biWRp3xogSibTMkc80FGBiYxe8m0STxEEoZ3MdYgiL6LppgxTX0M0aWKsklx3Z2Kr+T2W5K5Ka9o6O26C9MXSZu9BZwpViHG4ZSghZ+u+RJ8jZIEsonU/OH24t595UrAo+MsOX34OmxaG3m70EaBkXXBRfAYNet/2Dt6fORSlg0tJSNxXIrHodie1ITT5XIeosI+t0dpsTVrnR2yGxNWDhM2CxJzP+3o4RtmH/RJaBFdt1mtL8aC8ogPvGmdR5rep3jP/rF6DYuoRWql+PydGeWkDYjhmpWiz5l3nmoSH4/nrX4WXHNVhSwDAB/szQoW6ewI6sT3K4aEEj6WIksWv3nozeNv1mYf3o45yaNbkqeljDuFK/q8JVwhyKPb7AvX3SwFbK6hesGh4M=
+  app: desolate-atoll-75521
+  on:
+    repo: therocketforever/the-graph-is-not-the-territory
